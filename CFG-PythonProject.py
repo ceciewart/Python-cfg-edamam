@@ -4,11 +4,11 @@ import pandas as pd
 
 # using python request module to interact with the Edamam Search Recipe REST API
 def search_recipe(ingredient, meal_type):
-    #seeting API key and ID
+    #setting API key and ID
     app_id = 'adc26e15'
     app_key = '3dc4d461a603a76bb8d7d688f5a8c5fb'
 
-    #seeting the url params that will be included in the request
+    #setting the url params that will be included in the request
     params = {"q": ingredient,  "mealType": meal_type}
     url = f'https://api.edamam.com/api/recipes/v2?type=public&app_id={app_id}&app_key={app_key}'
     result = requests.get(url, params)
